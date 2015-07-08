@@ -4,12 +4,17 @@
 		<form>
 			<p class="alert alert-danger" ng-if="auth.loginError"><strong>Error:</strong> {{auth.loginErrorText}}</p>
 			<div class="form-group">
+		    	<input type="text" class="form-control" placeholder="Name" ng-model="auth.name">
+		  	</div>
+			<div class="form-group">
 		    	<input type="email" class="form-control" placeholder="Email" ng-model="auth.email">
 		  	</div>
 		  	<div class="form-group">
 		    	<input type="password" class="form-control" placeholder="Password" ng-model="auth.password">
 		  	</div>
 		  	<button class="btn btn-primary" ng-click="auth.login()">Submit</button>
+		  	<button class="btn btn-success" ng-click="auth.register()">Register</button>
+		  	<a class="btn btn-default" href="/api/authenticate/with/facebook">Facebook</a>
 		</form>
 	</div>
 </div>

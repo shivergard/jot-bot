@@ -50,6 +50,8 @@
 
 			$authProvider.loginUrl = '/api/authenticate';
 
+			$authProvider.signupUrl = '/api/register';
+
 			$urlRouterProvider.otherwise('/auth');
 			
 			$stateProvider
